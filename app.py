@@ -20,3 +20,12 @@ data = load_data(10000)
 data_load_state.text('Loading data...done!')
 st.subheader('Raw data')
 st.write(data)
+import streamlit as st
+import matplotlib.pyplot as plt
+import numpy as np
+
+arr = np.random.normal(1, 1, size=100)
+fig, ax = plt.subplots()
+ax.hist(arr, bins=20)
+
+st.pyplot(fig)
